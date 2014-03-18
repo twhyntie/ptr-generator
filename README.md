@@ -10,5 +10,10 @@ python ptrgenerator-terminal.py
 '''
 
 ###Interfacing with other software
-To interface the generator script with other software, 
+To interface the generator script with other software, call the ptrgenerator.py file with 25 command line arguments, these are detailed fully in comments in the source.
+
+##Other Files Included
+
+- /prism/* : [PrismJS](http://prismjs.com/) library for syntax highlighting the generated code.
+- Fonts: League Gothic and Open Sans, for use on the page.
 
