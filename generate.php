@@ -3,6 +3,11 @@
 <title>Generated PTR</title>
 <script src = "prism/prism.js"></script>
 <style>
+@font-face
+{
+font-family: league-gothic;
+src: url(font/league-gothic.otf);
+}
 #header {
 width: 100%;
 height: 120px;
@@ -12,7 +17,7 @@ top: 0;
 left: 0;
 text-align: center;
 font-size: 100px;
-font-family: League Gothic;
+font-family: league-gothic;
 color: #333333;
 }
 body {
