@@ -19,7 +19,7 @@ def format_duration(day, hour, minute, second):
 def usage():
 	print "An incorrect number of command line arguments were provided to the program. Cannot continue. \n"
 
-if ((len(sys.argv) - 1) != 25):
+if ((len(sys.argv) - 1) != 29):
 	#Incorrect number of arguments
 	usage()
 	
@@ -71,11 +71,30 @@ else:
 
 	"""
 
-	# Output XML to 'output.PTR' so data be read by PHP
+	# Output XML to 'result.xml' so data be read by PHP
 
-	#outfile = open("output.ptr", "w")
-	#outfile.write(xml)
-	#outfile.close()
+	outfile = open("result.xml", "w")
+	outfile.write(xml)
+	outfile.close()
         print xml
-	#print "\nDone"
+		
+	if (sys.argv[26] == "on"):
+		#FTP mode is enabled
+		from ftplib import FTP
 	
+		print "////FTPLOG////"
+
+		ftp = FTP(sys.argv[27])
+		ftp.login(sys.argv[28], sys.argv[29])
+		print "Logged in"		
+
+		file = open("result.xml", 'rb')
+
+		ftp.storbinary("STOR generated-ptr.xml", file)
+		print "Stored"
+		file.close()
+
+		ftp.quit()
+
+
+

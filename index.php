@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <title>LUCID PTR generator</title>
 <style>
@@ -79,5 +82,11 @@ PTR ID: <input type = "text" name = "i23"><br>
 Priority: <input type = "text" name = "i24"><br>
 <br>
 Explanatory Text: <br><textarea name = "i25"></textarea><br>
+<br>
+<input type = "checkbox" name = "i26">Upload to an FTP server</input><br>
+Address: <input name = "i27"><br>
+Username: <input name = "i28"><br>
+Password: <input name = "i29" type = "password">
+<br><br>
 <input type = "submit" value = "Submit">
 </form>

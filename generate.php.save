@@ -1,10 +1,10 @@
-<?php
-exec("python ptrgenerator.py '{$_GET['i1']}' '{$_GET['i2']}' '{$_GET['i3']}' '{$_GET['i4']}' '{$_GET['i5']}' '{$_GET['i6']}' '{$_GET['i7']}' '{$_GET['i8']}' '{$_GET['i9']}' '{$_GET['i10']}' '{$_GET['i11']}' '{$_GET['i12']}' '{$_GET['i13']}' '{$_GET['i14']}' '{$_GET['i15']}' '{$_GET['i16']}' '{$_GET['i17']}' '{$_GET['i18']}' '{$_GET['i19']}' '{$_GET['i20']}' '{$_GET['i21']}' '{$_GET['i22']}' '{$_GET['i23']}' '{$_GET['i24']}' '{$_GET['i25']}' '{$_GET['i26']}' '{$_GET['i27']}' '{$_GET['i28']}' '{$_GET['i29']}'", $result);
-
+exec("python ptrgenerator.py '{$_GET['i1']}' '{$_GET['i2']}' '{$_GET['i3']}' '{$_GET['i4']}' '{$_GET['i5']}' '{$_GET['i6']}' '{$_GET['i7']}' '{$_GET['i8']}' '{$_GET['i9']}' '{$_GET['i10']}' '{$_GET['i11']}' '{$_GET['i12']}' '{$_GET['i13']}' '{$_GET['i14']}' '{$_GET['i15']}' '{$_GET['i16']}' '{$_GET['i17']}' '{$_GET['i18']}' '{$_GET['i19']}' '{$_GET['i20']}' '{$_GET['i21']}' '{$_GET['i22']}' '{$_GET['i23']}' '{$_GET['i24']}' '{$_GET['i25']}'", $result);
 $result = htmlentities(implode("\n", $result));
+//Force downlaod xml file
+file_put_contents("result.xml", $result);
+header("Location: forcedownload.php?xml=".$result);
 ?>
 <!DOCTYPE html>
-<meta http-equiv="refresh" content="0;URL='forcedownload.php'" />
 <link rel = "stylesheet" href = "prism/prism.css">
 <title>Generated PTR</title>
 <script src = "prism/prism.js"></script>
